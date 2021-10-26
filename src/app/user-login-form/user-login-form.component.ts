@@ -22,11 +22,15 @@ export class UserLoginFormComponent implements OnInit {
   }
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((result) => {
+
+  // Store current user and token in localStorage.
+      localStorage.setItem('username', result.user.Username);
+      localStorage.setItem('token', result.token);
       // Logic for a successful user registration
       this.dialogRef.close(); // This will close the modal on success!
       console.log(result);
       this.snackBar.open('user logged in successfully!', 'OK', {
-        duration: 2000
+        duration: 1000
       });
       this.router.navigate(['movies']);
     }, (result) => {

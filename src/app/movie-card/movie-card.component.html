@@ -1,30 +1,41 @@
-<div style="display: flex;">
+<app-navbar></app-navbar>
+<div class="movie-container" >
     <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
         <mat-card-header>
-        <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-icon *ngIf="!setFavStatus(movie._id)" (click)="addToUserFavorites(movie._id, movie.Title)" class="favorite-button">favorite_border</mat-icon>
+            <mat-icon *ngIf="setFavStatus(movie._id)" (click)="removeFromUserFavorites(movie._id, movie.Title)" class="favorite-button-active">favorite</mat-icon>
             <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
         </mat-card-header>
-        <img src={{movie.ImagePath}} alt= {{movie.Title}} />
+        <mat-card-content>
+            <img class="movie-img" src={{movie.imagePath}} alt={{movie.Title}}>
+        </mat-card-content>
         <mat-card-actions>
             <button
+            class='button-link-genre'
                 mat-button
-                color="primary"
+                color='primary'
+                (click)='openGenre(movie.Genre.Name, movie.Genre.Description)'
             >
-                Genre
+            Genre
             </button>
             <button
+                class='button-link-director'
                 mat-button
-                color="primary"
+                color='primary'
+                (click)='openDirector(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)'
             >
-                Director
+            Director
             </button>
             <button
+            class='button-link-synopsis'
                 mat-button
-                color="primary"
+                color='primary'
+                (click)='openSynopsis(movie.Title, movie.imagePath, movie.Description)'
             >
-                Synopsis
+            Synopsis
             </button>
-            <mat-icon>favorite_border</mat-icon>
+            
         </mat-card-actions>
     </mat-card>
 </div>
