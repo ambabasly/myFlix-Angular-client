@@ -41,7 +41,7 @@ export class MovieCardComponent {
     this.getUsersFavs();
   }
 
-   /**
+  /**
    * to gets all movies
    */
   getMovies(): void {
@@ -57,7 +57,7 @@ export class MovieCardComponent {
    */
   getUsersFavs(): void {
     this.fetchApiData.getUser(user).subscribe((resp:any) => {
-      this.favs = resp.FavouriteMovies;
+      this.favs = resp.FavoriteMovies;
       console.log(this.favs, 'favs');
       return this.favs;
     })
