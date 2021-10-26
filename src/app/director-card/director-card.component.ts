@@ -1,5 +1,6 @@
+// core modules
 import { Component, Inject, Input, OnInit } from '@angular/core';
-
+// material modules
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -11,6 +12,9 @@ export class DirectorCardComponent implements OnInit {
 
   constructor(
 
+    /**
+     * using Inject to get movie details from the movie object
+     */
     @Inject(MAT_DIALOG_DATA)
     public data: {
       name:string,

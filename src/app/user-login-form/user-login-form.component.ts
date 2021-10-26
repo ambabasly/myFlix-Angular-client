@@ -1,8 +1,13 @@
+// Core modules
 import { Component, OnInit, Input } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { FetchApiDataService } from '../fetch-api-data.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+
+// Material components
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+// Importing component
+import { FetchApiDataService } from '../fetch-api-data.service';
+
 
 @Component({
   selector: 'app-user-login-form',
@@ -10,6 +15,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-login-form.component.scss']
 })
 export class UserLoginFormComponent implements OnInit {
+
+  /**
+   * Required for the login form
+   */
   @Input() userData = { Username: '', Password: '' };
 
   constructor(
@@ -20,6 +29,13 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+   /**
+   * Sends a login request, if successful,
+   * - saves username to local storage (for future requests)
+   * - saves token to local storage (for future requests)
+   * - redirects to the '/movies' API endpoint
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((result) => {
 
@@ -36,7 +52,7 @@ export class UserLoginFormComponent implements OnInit {
     }, (result) => {
       console.log(result);
       this.snackBar.open(result, 'OK', {
-        duration: 2000
+        duration: 1000
       });
     });
   }

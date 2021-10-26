@@ -1,7 +1,8 @@
+// Core modules
 import { Component, OnInit, Input } from '@angular/core';
-
+// components
 import { FetchApiDataService } from '../fetch-api-data.service';
-
+// Material modules
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -13,7 +14,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class EditUserComponent implements OnInit {
 
-
+  /**
+   * Required for the update user form
+   */
   @Input() userData = { 
     Username: '',
     Name: '', 
@@ -30,7 +33,9 @@ export class EditUserComponent implements OnInit {
 
   ngOnInit(): void {}
 
- 
+  /**
+   * to update user details
+   */
   editUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe((res) => {
       // Logic for successful user registration needs to be implemented here!
