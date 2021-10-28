@@ -1,21 +1,36 @@
-* {
-    font-family: "Ubuntu-Medium", sans-serif;
-    font-size: 1rem;
-    background-color: #164;
-    color: #ffeeee;
-  }
-  .top-nav-container{
-    padding: 50px;
-    margin-bottom: 100px;
-  }
-  .top-nav {
-    flex: 1 1 auto;
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-  
-  .app-logo {
-    max-height: 58px;
-  }
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
 
- 
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: black;
+}
+
+.app-title {
+  font-size: 30px;
+  margin: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.app-title:hover {
+  color: rgb(202, 191, 191);
+}
+
+button:hover {
+  color: rgb(202, 191, 191);
+}
+
+.profile {
+  font-size: 16px;
+  margin: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}

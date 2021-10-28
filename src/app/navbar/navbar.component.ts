@@ -27,39 +27,26 @@ export class NavbarComponent implements OnInit {
   /**
    * opens modal with user details
    */
-  toProfile(): void {
-    this.router.navigate(['/profile'])
-      .then(success => console.log('navigation success?', success))
-      .catch(console.error);
-  }
-
-   /**
-   * navigates to "all movies"
-   */
-  toMovies(): void {
-    this.router.navigate(['/movies'])
-      .then(success => console.log('navigation success?', success))
-      .catch(console.error);
+   movies(): void {
+    this.router.navigate(['movies']);
   }
 
   /**
-   * navigates to homescreen
+   * Navigates to the profile page.
    */
-  backToHome(): void {
-    this.router.navigate(['/movies'])
-      .then(success => console.log('navigation success?', success))
-      .catch(console.error);
+  goToProfile(): void {
+    this.router.navigate(['profile'])
   }
 
   /**
-   * logs out the user by clearing the localstorage (username, token) and reloads the page
-   * then -> redirect to welcome page
+   * This method will clear the token and username from local storage.
+   * Logs user out and navigates to the welcome page.
    */
-  logOut(): void {
-    localStorage.removeItem('user');
-    localStorage.removeItem('token');
-    this.router.navigate(['/welcome'])
-      .then(success => console.log('navigation success?', success))
-      .catch(console.error);
+  signOut(): void {
+    localStorage.clear;
+    this.router.navigate(['welcome']);
+    this.snackBar.open('You are logged out!', 'OK', {
+      duration: 2000
+    });
   }
 }

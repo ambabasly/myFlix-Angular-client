@@ -15,11 +15,10 @@ export class SynopsisCardComponent implements OnInit {
     /**
      * uses Inject to get movie details from the movie object
      */
-    @Inject(MAT_DIALOG_DATA)
-    public data: {
-      title:string,
-      imageUrl:any,
-      description:string
+     @Inject(MAT_DIALOG_DATA)
+     public data: {
+       title: string;
+       description: string;
     }
 
   ) { }

@@ -7,7 +7,7 @@
             <mat-card-subtitle class="subtitle">Directed by: {{movie.Director.Name}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <img class="movie-img" src={{movie.imagePath}} alt={{movie.Title}}>
+            <img class="movie-img" src={{movie.ImagePath}} alt={{movie.Title}}>
         </mat-card-content>
         <mat-card-actions>
             <button
@@ -30,7 +30,7 @@
             class='button-link-synopsis'
                 mat-button
                 color='primary'
-                (click)='openSynopsis(movie.Title, movie.imagePath, movie.Description)'
+                (click)='openSynopsis(movie.Title, movie.ImagePath, movie.Description)'
             >
             Synopsis
             </button>

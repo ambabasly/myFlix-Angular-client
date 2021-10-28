@@ -1,8 +1,19 @@
-.director-meta {
-    color:rgb(139, 139, 139);
-    font-style:italic;
-  }
-  .close-btn {
-    text-align:right;
-    margin-top:25px;
-  }
+.container {
+  background-color: black;
+}
+
+.director {
+  color: white;
+  padding: 0 20px;
+}
+
+.text {
+  color: white;
+  padding: 5px 20px;
+  font-size: 1rem;
+}
+
+.close {
+  color: red;
+  padding: 0 20px;
+}

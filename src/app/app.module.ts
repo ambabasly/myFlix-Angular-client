@@ -33,6 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 
 
+
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
@@ -56,7 +57,7 @@ const appRoutes: Routes = [
     FavoritesComponent,
     UserProfileComponent,
     NavbarComponent,
-    EditUserComponent,   
+    EditUserComponent,  
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

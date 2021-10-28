@@ -1,19 +1,38 @@
-<div class="navbar">
-    <div class="container">
-      <button mat-button class="button" routerLink="/movies">
-        myFlixApp
+<div class='navbar'>
+  <div class='nav-container' style="text-align: center;" >
+    <button
+      mat-button
+      class='app-title'
+      routerLink='/movies'
+      color='warn'
+    >
+      myFlix
+    </button>
+    <div class='nav-links'>
+      <button
+        mat-button
+        class='profile'
+        routerLink='/movies'
+        color='warn'
+      >
+        Movies
       </button>
-  
-      <div class="links">
-        <button class="button" mat-button (click)="toMovies()">
-          Movies
-        </button>
-        <button class="button" mat-button (click)="toProfile()">
-          Profile
-        </button>
-        <button class="button" mat-button (click)="logOut()">
-          Log Out
-        </button>
-      </div>
+      <button
+        mat-button
+        class='profile'
+        routerLink='/profile'
+        color='warn'
+      >
+        Profile
+      </button>
+      <button
+        mat-button
+        class='profile'
+        (click)='signOut()'
+        color='warn'
+      >
+        Logout
+      </button>
     </div>
   </div>
+</div>

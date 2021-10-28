@@ -4,8 +4,10 @@ import { Router } from '@angular/router';
 
 //import from components
 import { FetchApiDataService } from '../fetch-api-data.service';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { EditUserComponent } from '../edit-user/edit-user.component';
+import { SynopsisCardComponent } from '../synopsis-card/synopsis-card.component';
+import { GenreCardComponent } from '../genre-card/genre-card.component';
+import { DirectorCardComponent } from '../director-card/director-card.component';
 // material modules
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
@@ -21,13 +23,14 @@ import { MatDialog } from '@angular/material/dialog';
 export class UserProfileComponent implements OnInit {
 
   user: any = {};
+  movies: any = {};
+  favorites: any = {};
 
   constructor(
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
     public dialog: MatDialog,
     public router: Router,
-    public movieCard: MovieCardComponent,
   ) { }
 
   /**
@@ -54,6 +57,7 @@ export class UserProfileComponent implements OnInit {
       width: '500px'
     })
   }
+  
 
   deleteProfile(): void {
     if(confirm('Are you sure? This cannot be undone.')) {

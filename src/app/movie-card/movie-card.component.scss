@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    cursor: pointer;
   }
   
   .mat-card-title {
@@ -49,3 +50,20 @@
   .button-link {
     font-family: "Ubuntu-Light", Roboto;
   }
+
+  button:hover {
+    color: rgb(202, 191, 191);
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+  
+
