@@ -27,17 +27,15 @@ import { DirectorCardComponent } from './director-card/director-card.component';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { SynopsisCardComponent } from './synopsis-card/synopsis-card.component';
 import { GenreCardComponent } from './genre-card/genre-card.component';
-import { FavoritesComponent } from './favorites/favorites.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { EditUserComponent } from './edit-user/edit-user.component';
-
+import { ProfileUpdateComponent } from './profile-update/profile-update.component';
+import { ProfileDeleteComponent } from './profile-delete/profile-delete.component';
 
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
-  { path: 'favorites', component: FavoritesComponent },
   { path: 'users', component: UserProfileComponent },
   { path: 'genres', component: GenreCardComponent },
   { path: 'directors', component: DirectorCardComponent },
@@ -54,10 +52,10 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     DirectorCardComponent,
     GenreCardComponent,
-    FavoritesComponent,
     UserProfileComponent,
     NavbarComponent,
-    EditUserComponent,  
+    ProfileUpdateComponent,
+    ProfileDeleteComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
