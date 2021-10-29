@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
 
 const username = localStorage.getItem('username')
 
@@ -35,7 +36,9 @@ export class NavbarComponent implements OnInit {
    * Navigates to the profile page.
    */
   goToProfile(): void {
-    this.router.navigate(['profile'])
+    this.dialog.open(UserProfileComponent, {
+      width: '500px'
+    } );
   }
 
   /**
