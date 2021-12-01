@@ -6,9 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<img width="1440"
                                                                                                                                                     
-To use it, please register in the welcome page. <a href="https://ambabasly.github.io/myFlix-Angular-client/we<img width="1440" alt="Screenshot 2021-12-01 at 22 57 58" src="https://user-images.githubusercontent.com/88083504/144321343-060aeb14-beac-4497-93d0-8d7db92198a0.png">
-lcome">link here!</a>     
-
+To use it, please register in the welcomelcome">link here!</a> page. <a href="https://ambabasly.github.io/myFlix-Angular-client/we<img width="1440" 
+                                                                                                                  
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
