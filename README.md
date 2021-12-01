@@ -4,7 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<img width="1440"
+                                                                                                                                                    alt="Screenshot 2021-12-01 at 22 57 58" src="https://user-images.githubusercontent.com/88083504/144320830-77fb6936-7a39-4875-9e9c-6a0fe35ec3f6.png">
+
 
 To use it, please register in the welcome page. <a href="https://ambabasly.github.io/myFlix-Angular-client/welcome">link here!</a>
 
